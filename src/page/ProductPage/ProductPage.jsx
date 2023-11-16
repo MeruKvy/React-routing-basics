@@ -1,5 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 
 export function ProductPage() {
-  return <div>ProductPage</div>;
+  const { id } = useParams();
+  
+  return <div>produktis aidia { id }</div>;
 }

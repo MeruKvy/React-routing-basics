@@ -1,15 +1,13 @@
 import { useNavigate, Outlet } from "react-router-dom";
 
 export function PublicLayout() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <nav>
       <button onClick={() => navigate("/")}>Home</button>
-      <button onClick={() => navigate("/about")}>About</button>
-      <button onClick={() => navigate("/contact")}>Contact</button>
-      <button onClick={() => navigate("/news")}>News</button>
-      <Outlet/>
+      <button onClick={() => navigate("/products")}>Products</button>
+      <Outlet />
     </nav>
   );
 }

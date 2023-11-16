@@ -1,12 +1,10 @@
 import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { MainPage } from "./page/MainPage";
-import { AboutPage } from "./page/AboutPage";
-import { ContactPage } from "./page/ContactPage";
-import { NewsPage } from "./page/NewsPage";
 import { ErrorPage } from "./page/ErrorPage";
 import { PublicLayout } from "./layouts/PublicLayout";
-import { ProductPage } from "./page/ProductPage/ProductPage";
+import { ProductsPage } from "./page/ProductsPage";
+import { ProductPage } from "./page/ProductPage";
 
 
 
@@ -19,11 +17,10 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<MainPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/news" element={<NewsPage />} />
+          <Route path="/products" element={<ProductsPage/>} />
+          <Route path="/products/:id" element={<ProductPage/>} />
           <Route path="/*" element={<ErrorPage />} />
-        </Route>
+        </Route>  
       </Routes>
     </React.Fragment>
   );
