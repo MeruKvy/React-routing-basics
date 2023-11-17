@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function ProductsPage() {
   const [loading, setLoading] = useState(false);
@@ -29,8 +30,9 @@ export function ProductsPage() {
     <div>
       {products.map((product) => {
         return (
-          <div>
+          <div style={{ border: "solid 1px black"}} key={product.id}>
             <h2>{product.title}</h2>
+            <Link to={`${product.id}`}>More Details</Link>
           </div>
         );
       })}
